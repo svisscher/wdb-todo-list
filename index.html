@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <title>To-Do List App</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+      <div id="main">
+        <!-- Header -->
+        <h1>To-Do List</h1>
+        <span id="expand">+</span>
+
+        <!-- Input new to-do item -->
+        <input type="text" id="input" placeholder="Add new to-do item">
+
+        <!-- Registered to-do items -->
+        <ul id="list">
+          <li class="item"><span class="delete">X</span>Item 1</li>
+          <li class="item"><span class="delete">X</span>Item 2</li>
+          <li class="item"><span class="delete">X</span>Item 3</li>
+        </ul>
+      </div>
+
+      <script src="node_modules/jquery/dist/jquery.min.js" defer></script>
+      <script src="js/main.js" defer></script>
+    </body>
+</html>

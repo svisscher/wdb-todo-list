@@ -1,0 +1,21 @@
+/* General */
+#main {
+  border: 3px solid teal;
+  margin: 0 auto;
+  width: 25%;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/* Header */
+#expand {
+  font-size: 30px;
+}
+
+/* Content */
+.done {
+  color: gray;
+  text-decoration: line-through;
+}
