@@ -11,7 +11,7 @@ This app was built to practice newly acquired skills in HTML, CSS and the JS lib
 * Responsive design
 
 ## Additional features
-In addition to those mentioned above, the extra features below are planned to be included as a means of practice:
+In addition to the features mentioned above, these extra features are planned to be included in order to practice with new concepts:
 - [ ] Re-order the to-do list by dragging and dropping with native HTML [**planned**]
 - [ ] Dynamic display of icon depending on whether input field is shown or hidden [**planned**]
 - [ ] Own personal design using CSS [**planned**]
