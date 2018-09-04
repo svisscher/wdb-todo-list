@@ -1,11 +1,11 @@
-$('input').keypress(function (e) {
+$('input[type="text"]').keypress(function (event) {
   // Trigger on 'Enter' key
-  if (e.which === 13) {
+  if (event.which === 13) {
     // Add new item to list by inserting user input
-    const input = $('input').val();
-    $('ul').append('<li class="item"><span class="delete">X</span>' + input + '</li>');
+    const userInput = $(this).val();
+    $('ul').append('<li class="item"><span class="delete">X</span> ' + userInput + '</li>');
     // Empty input field
-    $('input').val('');
+    $(this).val('');
   }
 });
 
