@@ -9,7 +9,7 @@ $('input').keypress(function (e) {
   }
 });
 
-$('#expand').on('click', function () {
+$('span#expand').on('click', function () {
   $('input').fadeToggle('400', 'linear');
 });
 
@@ -17,7 +17,8 @@ $('li.item').on('click', function () {
   $(this).toggleClass('done');
 });
 
-$('span.delete').on('click', function () {
+$('span.delete').on('click', function (event) {
+  event.stopPropagation();
   $(this).parent().fadeOut('400', function () {
     $(this).remove();
   });
