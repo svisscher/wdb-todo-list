@@ -7,6 +7,7 @@ This app was built to practice newly acquired skills in HTML, CSS and the JS lib
 * Add new items to the to-do list
 * Mark completed items as done
 * Delete items from the to-do list
+* Show/hide input field for new items
 * Responsive design
 
 ## Additional features
