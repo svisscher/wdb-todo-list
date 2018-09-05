@@ -1,8 +1,34 @@
 /* General */
+#main:before {
+  background-attachment: fixed;
+  background-image: url(../img/autumn-studio-394136-unsplash.jpg);
+  background-position: center 65%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  bottom: 0;
+  content: '';
+  display: block;
+  height: 100%;
+  left: 0;
+  opacity: 0.5; /* background-blend-mode still has limited support */
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
+
 #main {
-  border: 3px solid teal;
-  margin: 0 auto;
-  width: 25%;
+  border: 2px solid gray;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.25rem;
+  left: 0;
+  margin: 5rem auto;
+  padding: 0 5rem;
+  position: absolute;
+  right: 0;
+  width: 30%;
+  z-index: 0;
 }
 
 ul {
@@ -10,8 +36,26 @@ ul {
 }
 
 /* Header */
+h1 {
+  border: 1px solid #2C655B;
+  color: #2C655B;
+  font-family: 'Fredericka the Great', cursive;
+  font-size: 4rem;
+  font-weight: normal;
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+}
+
+input {
+  float: left;
+  margin: 0;
+  width: 100%;
+}
+
 #expand {
-  font-size: 30px;
+  margin: 0;
+  text-align: center;
 }
 
 /* Content */
