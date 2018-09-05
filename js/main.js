@@ -9,7 +9,7 @@ $('input[type="text"]').keypress(function (event) {
   }
 });
 
-$('span#expand').on('click', function () {
+$('i#expand').on('click', function () {
   $('input').fadeToggle('400', 'linear');
 });
 

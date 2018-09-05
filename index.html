@@ -6,23 +6,36 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fredericka+the+Great|Lato">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     </head>
     <body>
       <div id="main">
         <!-- Header -->
-        <h1>To-Do List</h1>
-
-        <!-- Show or hide input field -->
-        <span id="expand">+</span>
+        <h1>To-Do List
+            <!-- Show or hide input field -->
+            <i class="fas fa-plus-square" id="expand"></i>
+        </h1>
 
         <!-- Input new to-do item -->
-        <input type="text" id="input" placeholder="Add new to-do item">
+        <input type="text" placeholder="Add to-do">
 
         <!-- Registered to-do items -->
-        <ul id="list">
-          <li class="item"><span class="delete">X</span>Test item for font</li>
-          <li class="item"><span class="delete">X</span>Another item just in case</li>
-          <li class="item"><span class="delete">X</span>Last but not least</li>
+        <ul>
+          <li>
+            <span class="delete">
+              <i class="far fa-trash-alt"></i>
+            </span>
+            Test item for font</li>
+          <li>
+            <span class="delete">
+              <i class="far fa-trash-alt"></i>
+            </span>
+            Another item just in case</li>
+          <li>
+            <span class="delete">
+              <i class="far fa-trash-alt"></i>
+            </span>
+            Last but not least</li>
         </ul>
       </div>
 
