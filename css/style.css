@@ -39,10 +39,10 @@ ul {
 /* Header */
 h1 {
   color: #2C655B;
-  font-family: 'Fredericka the Great', cursive;
-  font-size: 4.0em;
+  font-family: 'Cabin Sketch', cursive;
+  font-size: 5.8rem;
   font-weight: normal;
-  margin: 0.1em auto;
+  margin: 0 auto;
   padding: 0;
   text-transform: uppercase;
 }
@@ -65,7 +65,7 @@ input {
   font-family: 'Lato';
   font-size: 1.25rem;
   margin: 0 0 1.25rem 0;
-  padding: 15px 15px 15px 20px;
+  padding: 1.0rem 1.0rem 1.0rem 1.5rem;
   width: 100%;
 }
 
