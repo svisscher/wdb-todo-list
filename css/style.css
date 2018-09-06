@@ -10,7 +10,7 @@
   display: block;
   height: 100%;
   left: 0;
-  opacity: 0.5; /* background-blend-mode still has limited support */
+  opacity: 0.35; /* background-blend-mode still has limited support */
   position: fixed;
   right: 0;
   top: 0;
@@ -19,38 +19,65 @@
 }
 
 #main {
-  border: 2px solid gray;
   font-family: 'Lato', sans-serif;
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   left: 0;
-  margin: 5rem auto;
-  padding: 0 5rem;
+  margin: 5.5rem auto;
+  padding: 0 3.0rem;
   position: absolute;
   right: 0;
-  width: 30%;
+  width: 35%;
   z-index: 0;
 }
 
 ul {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 /* Header */
 h1 {
-  border: 1px solid #2C655B;
   color: #2C655B;
-  font-family: 'Fredericka the Great', cursive;
-  font-size: 4rem;
+  font-family: 'Cabin Sketch', cursive;
+  font-size: 5.8rem;
   font-weight: normal;
   margin: 0 auto;
-  text-align: center;
-  width: 100%;
+  padding: 0;
+  text-transform: uppercase;
+}
+
+i.fa-plus-square {
+  color: #E7B23E;
+  cursor: pointer;
+  float: right;
+  font-size: 1.5rem;
+  position: relative;
+  top: 55px;
 }
 
 input {
-  float: left;
-  margin: 0;
+  background-color: rgba(43,99,89,0.8);
+  border: 3px solid rgba(0,0,0,0);
+  border-radius: 5px;
+  box-sizing: border-box;
+  color: #E9D9CA;
+  font-family: 'Lato';
+  font-size: 1.25rem;
+  margin: 0 0 1.25rem 0;
+  padding: 1.0rem 1.0rem 1.0rem 1.5rem;
   width: 100%;
+}
+
+input:focus {
+  background-color: rgba(43,99,89,0.8);
+  border: 3px solid #E7B23E;
+  color: #E7B23E;
+  outline: none;
+}
+
+input::placeholder {
+  color: #E9D9CA;
 }
 
 #expand {
@@ -59,7 +86,43 @@ input {
 }
 
 /* Content */
+li {
+  background-color: rgba(255,255,255,0.6);
+  border-radius: 5px;
+  box-sizing: border-box;
+  color: #161616;
+  cursor: pointer;
+  height: 50px;
+  line-height: 50px;
+  margin-top: 3px;
+}
+
+li:hover {
+  background-color: rgba(231,178,62,0.3);
+}
+
+li:hover span {
+  opacity: 1.0;
+  width: 50px;
+}
+
 .done {
-  color: gray;
+  color: #747474;
   text-decoration: line-through;
+}
+
+.delete {
+  background-color: #BD4E2B;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  color: #FFF;
+  cursor: pointer;
+  display: inline-block;
+  height: 50px;
+  line-height: 50px;
+  margin: 0 1.0rem 0 0;
+  opacity: 0;
+  text-align: center;
+  transition: 0.2s;
+  width: 0;
 }

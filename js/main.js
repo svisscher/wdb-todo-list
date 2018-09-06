@@ -3,13 +3,17 @@ $('input[type="text"]').keypress(function (event) {
   if (event.which === 13) {
     // Add new item to list by inserting user input
     const userInput = $(this).val();
-    $('ul').append('<li class="item"><span class="delete">X</span> ' + userInput + '</li>');
+    $('ul').append('<li class="item"><span class="delete"><i class="far fa-trash-alt"></i></span> ' + userInput + '</li>');
     // Empty input field
     $(this).val('');
   }
 });
 
-$('span#expand').on('click', function () {
+$('input[type="text"]').on('blur', function () {
+  $(this).val('');
+})
+
+$('i#expand').on('click', function () {
   $('input').fadeToggle('400', 'linear');
 });
 
