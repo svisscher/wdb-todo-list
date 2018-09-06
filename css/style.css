@@ -47,7 +47,7 @@ h1 {
   text-transform: uppercase;
 }
 
-i.fa-plus-square {
+i.fa-plus-square, i.fa-minus-square {
   color: #E7B23E;
   cursor: pointer;
   float: right;

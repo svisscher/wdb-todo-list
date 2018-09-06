@@ -13,8 +13,9 @@ This app was built to practice newly acquired skills in HTML, CSS and the JS lib
 ## Additional features
 In addition to the ones mentioned above, these extra features are planned in order to practice with new concepts:
 - [ ] Re-order the to-do list by dragging and dropping with native HTML [**planned**]
-- [ ] Dynamic display of icon depending on whether input field is shown or hidden [**planned**]
+- [x] Dynamic display of icon depending on whether input field is shown or hidden [**planned**]
 - [x] Any user input entered is removed from input field when elements loses focus
+- [ ] Use keyboard shortcuts to navigate page [**planned**]
 - [x] Own personal design using CSS
 
 ## Credit
