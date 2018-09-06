@@ -9,6 +9,10 @@ $('input[type="text"]').keypress(function (event) {
   }
 });
 
+$('input[type="text"]').on('blur', function () {
+  $(this).val('');
+})
+
 $('i#expand').on('click', function () {
   $('input').fadeToggle('400', 'linear');
 });
