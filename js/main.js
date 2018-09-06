@@ -11,10 +11,11 @@ $('input[type="text"]').keypress(function (event) {
 
 $('input[type="text"]').on('blur', function () {
   $(this).val('');
-})
+});
 
 $('i#expand').on('click', function () {
   $('input').fadeToggle('400', 'linear');
+  $(this).toggleClass('i.fas fa-plus-square');
 });
 
 $('ul').on('click', 'li', function () {
