@@ -1,3 +1,64 @@
+// Variables
+const items = $('li');
+let dragSrcEl = null;
+
+// Functions
+function handleDragStart(event) {
+  $(this).css('opacity', '0.4');
+  dragSrcEl = this;
+  event.dataTransfer.effectAllowed = 'move';
+  event.dataTransfer.setData('text/html', this.innerHTML);
+}
+
+function handleDragOver(event) {
+  // Prevent browser default behaviour if applicable
+  if (event.preventDefault) {
+    event.preventDefault();
+  }
+  event.dataTransfer.dropEffect = 'move';
+  return false;
+}
+
+function handleDragEnter(event) {
+  $(this).addClass('over');
+}
+
+function handleDragLeave(event) {
+  $(this).removeClass('over');
+}
+
+function handleDrop(event) {
+  // Stop some browsers from redirecting
+  if (event.stopPropagation) {
+    event.stopPropagation();
+  }
+  // Do nothing if dropping same item as dragging
+  if (dragSrcEl !== this) {
+    // Set source's HTML to HTML of item dropped on
+    dragSrcEl.innerHTML = this.innerHTML;
+    this.innerHTML = event.dataTransfer.getData('text/html');
+  }
+  return false;
+}
+
+// Vanilla JS: change into jQuery?
+function handleDragEnd(event) {
+  $(this).css('opacity', '1.0');
+  [].forEach.call(items, function (item) {
+    item.classList.remove('over');
+  });
+}
+
+// Vanilla JS: change into jQuery?
+[].forEach.call(items, function(item) {
+  item.addEventListener('dragstart', handleDragStart, false);
+  item.addEventListener('dragenter', handleDragEnter, false);
+  item.addEventListener('dragover', handleDragOver, false);
+  item.addEventListener('dragleave', handleDragLeave, false);
+  item.addEventListener('drop', handleDrop, false);
+  item.addEventListener('dragend', handleDragEnd, false);
+});
+
 $('input[type="text"]').keypress(function (event) {
   // Trigger on 'Enter' key
   if (event.which === 13) {
