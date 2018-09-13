@@ -36,6 +36,16 @@ ul {
   padding: 0;
 }
 
+[draggable] {
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  /* Required to make elements draggable in old WebKit */
+  -khtml-user-drag: element;
+  -webkit-user-drag: element;
+}
+
 /* Header */
 h1 {
   color: #2C655B;
@@ -125,4 +135,8 @@ li:hover span {
   text-align: center;
   transition: 0.2s;
   width: 0;
+}
+
+.over {
+  border: 2px dashed rgba(116,116,116,0.4);
 }
