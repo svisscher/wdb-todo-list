@@ -1,5 +1,5 @@
 // Variables
-const items = $('li');
+let items = $('li');
 let dragSrcEl = null;
 
 // Functions
@@ -46,23 +46,29 @@ function handleDragEnd(event) {
   items.removeClass('over');
 }
 
-items.each(function(element) {
-  this.addEventListener('dragstart', handleDragStart, false);
-  this.addEventListener('dragenter', handleDragEnter, false);
-  this.addEventListener('dragover', handleDragOver, false);
-  this.addEventListener('dragleave', handleDragLeave, false);
-  this.addEventListener('drop', handleDrop, false);
-  this.addEventListener('dragend', handleDragEnd, false);
-});
+function enableDragAndDrop() {
+  items = $('li');
+  items.each(function (element) {
+    this.addEventListener('dragstart', handleDragStart, false);
+    this.addEventListener('dragenter', handleDragEnter, false);
+    this.addEventListener('dragover', handleDragOver, false);
+    this.addEventListener('dragleave', handleDragLeave, false);
+    this.addEventListener('drop', handleDrop, false);
+    this.addEventListener('dragend', handleDragEnd, false);
+  });
+}
+
+enableDragAndDrop();
 
 $('input[type="text"]').keypress(function (event) {
   // Trigger on 'Enter' key
   if (event.which === 13) {
     // Add new item to list by inserting user input
     const userInput = $(this).val();
-    $('ul').append('<li class="item"><span class="delete"><i class="far fa-trash-alt"></i></span> ' + userInput + '</li>');
+    $('ul').append('<li draggable="true"><span class="delete"><i class="far fa-trash-alt"></i></span> ' + userInput + '</li>');
     // Empty input field
     $(this).val('');
+    enableDragAndDrop();
   }
 });
 
