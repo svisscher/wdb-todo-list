@@ -41,12 +41,9 @@ function handleDrop(event) {
   return false;
 }
 
-// Vanilla JS: change into jQuery?
 function handleDragEnd(event) {
   $(this).css('opacity', '1.0');
-  [].forEach.call(items, function (item) {
-    item.classList.remove('over');
-  });
+  items.removeClass('over');
 }
 
 // Vanilla JS: change into jQuery?
