@@ -46,14 +46,13 @@ function handleDragEnd(event) {
   items.removeClass('over');
 }
 
-// Vanilla JS: change into jQuery?
-[].forEach.call(items, function(item) {
-  item.addEventListener('dragstart', handleDragStart, false);
-  item.addEventListener('dragenter', handleDragEnter, false);
-  item.addEventListener('dragover', handleDragOver, false);
-  item.addEventListener('dragleave', handleDragLeave, false);
-  item.addEventListener('drop', handleDrop, false);
-  item.addEventListener('dragend', handleDragEnd, false);
+items.each(function(element) {
+  this.addEventListener('dragstart', handleDragStart, false);
+  this.addEventListener('dragenter', handleDragEnter, false);
+  this.addEventListener('dragover', handleDragOver, false);
+  this.addEventListener('dragleave', handleDragLeave, false);
+  this.addEventListener('drop', handleDrop, false);
+  this.addEventListener('dragend', handleDragEnd, false);
 });
 
 $('input[type="text"]').keypress(function (event) {
