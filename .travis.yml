@@ -1,5 +1,7 @@
 install:
   - npm install
+before_deploy:
+- rm -f .gitignore
 deploy:
   provider: pages
   skip-cleanup: true
