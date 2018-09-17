@@ -1,4 +1,20 @@
 /* General */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+[draggable] {
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  /* Required to make elements draggable in old WebKit */
+  -khtml-user-drag: element;
+  -webkit-user-drag: element;
+}
+
 #main:before {
   background-attachment: fixed;
   background-image: url(../img/autumn-studio-394136-unsplash.jpg);
@@ -30,22 +46,6 @@
   z-index: 0;
 }
 
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-[draggable] {
-  -moz-user-select: none;
-  -khtml-user-select: none;
-  -webkit-user-select: none;
-  user-select: none;
-  /* Required to make elements draggable in old WebKit */
-  -khtml-user-drag: element;
-  -webkit-user-drag: element;
-}
-
 /* Header */
 h1 {
   color: #2C655B;
@@ -55,15 +55,6 @@ h1 {
   margin: 0 auto;
   padding: 0;
   text-transform: uppercase;
-}
-
-i.fa-plus-square, i.fa-minus-square {
-  color: #E7B23E;
-  cursor: pointer;
-  float: right;
-  font-size: 1.5rem;
-  position: relative;
-  top: 55px;
 }
 
 input {
@@ -79,6 +70,10 @@ input {
   width: 100%;
 }
 
+input::placeholder {
+  color: #E9D9CA;
+}
+
 input:focus {
   background-color: rgba(43,99,89,0.8);
   border: 3px solid #E7B23E;
@@ -86,8 +81,13 @@ input:focus {
   outline: none;
 }
 
-input::placeholder {
-  color: #E9D9CA;
+.fa-plus-square, .fa-minus-square {
+  color: #E7B23E;
+  cursor: pointer;
+  float: right;
+  font-size: 1.5rem;
+  position: relative;
+  top: 55px;
 }
 
 #expand {
